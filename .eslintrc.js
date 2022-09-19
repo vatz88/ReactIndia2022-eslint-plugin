@@ -17,6 +17,6 @@ module.exports = {
    */
   rules: {
     'my-plugin/no-class-components': 1,
-    'my-plugin/no-deprecated-prop': 0,
+    'my-plugin/no-deprecated-prop': 1,
   },
 };

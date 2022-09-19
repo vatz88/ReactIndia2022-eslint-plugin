@@ -7,7 +7,21 @@ module.exports = {
   },
   create(context) {
     return {
-      JSXOpeningElement(node) {},
+      JSXOpeningElement(node) {
+        if (node.name?.name === 'MyComponent') {
+          const hasOldProp = node.attributes.some((attr) => {
+            if (attr.name?.name === 'oldProp') {
+              return true;
+            }
+          });
+          if (hasOldProp) {
+            context.report({
+              node,
+              message: "'oldProp' is deprecated, please use new prop",
+            });
+          }
+        }
+      },
     };
   },
 };
