@@ -1,0 +1,16 @@
+{
+  "name": "eslint-plugin-no-class-components",
+  "version": "1.0.0",
+  "description": "## Setup",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "eslint ./tests/sample.js"
+  },
+  "author": "Vatsal Joshi",
+  "license": "ISC",
+  "dependencies": {
+    "eslint": "8.23.1",
+    "eslint-plugin-react": "7.31.8",
+    "eslint-plugin-my-plugin": "file:my-plugin"
+  }
+}
